@@ -73,9 +73,41 @@ parseInt("101", 2); // 5
 
 ### Literals
 
+literal有以下种类：
 
+- `Array literals`
+- `Boolean literals`
+- `Numeric literals`: 分为Integer literals和Floating-point leterals
+- `Object literals`
+- `RegExp literals`
+- `String literals`
 
+下面对于其中一些特性较为复杂的做出介绍
 
+#### array literals
+
+一般的array literal定义是这样的：
+
+```javascript
+const coffees = ["French Roast", "Colombian", "Kona"];
+```
+
+但是array literal可以支持"extram comma"，即可以这样定义：
+
+```javascript
+const fish = ["Lion", , "Angel"];
+console.log(fish);
+// [ 'Lion', <1 empty item>, 'Angel' ]
+```
+
+fish数组的长度是3，当你打印时，index为1的元素显示"<1 empty item>"；而当你直接用index访问时，则会返回`undefined`。不仅如此，extra comma会且仅会忽略最后一个comma，如下：
+
+```javascript
+const fish1 = ["Lion", , "Angel"];
+const fish2 = ["Lion", , "Angel",];
+```
+
+fish1和fish2是完全相同的两个array，长度都为3
 
 
 
