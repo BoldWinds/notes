@@ -45,10 +45,20 @@ cat nohup.out
 
 查看后台任务的pid并kill
 
-```
+```bash
 pgrep -f "[command]"
 kill [pid]
 ```
 
 
+
+## 用户与组
+
+### 创建用户
+
+```bash
+useradd 选项 用户名
+```
+
+### 设置用户的shell为zsh
 
